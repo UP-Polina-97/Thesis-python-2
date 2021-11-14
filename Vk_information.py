@@ -1,7 +1,7 @@
 import requests
 
-#token_for_vk = input('Token for vk information:')
-token_for_vk = '34f4f11807efbe8c1b82a0850fa70f137c556b7221acde76b2acbf4e7d90fc485f5bd4fdd4ccb496e8e95'
+token_for_vk = input('Token for vk information:')
+#token_for_vk = ''
 def GetInfoFromVk(user_id):
     """ get infomration from the vk about person."""
     url_vk = 'https://api.vk.com/method/account.getProfileInfo'

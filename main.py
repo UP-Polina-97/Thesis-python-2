@@ -4,8 +4,8 @@ import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
 from Vk_information import GetInfoFromVk, GetPhotosVkData
 
-token = '315435a4bb1ff15688e8693288424d0d8378539467d65061a3e14dd2889fe56fee19286ba695bb3424a4c'
-#token = input('Token for group: ')
+#token = ''
+token = input('Token for group: ')
 
 vk = vk_api.VkApi(token=token)
 longpoll = VkLongPoll(vk)
