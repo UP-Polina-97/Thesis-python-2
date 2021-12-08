@@ -4,8 +4,7 @@ import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
 from Vk_information import get_users_for_date
 
-#token = input('Token for groupchat in vk: ')
-token = '315435a4bb1ff15688e8693288424d0d8378539467d65061a3e14dd2889fe56fee19286ba695bb3424a4c'
+token = input('Token for groupchat in vk: ')
 
 
 vk = vk_api.VkApi(token=token)
@@ -38,7 +37,7 @@ for event in longpoll.listen():
             if request == "привет":
                 BotWriteMsg(event.user_id,
                           f"Привет я бот для try try me. Я могу помочь вам найти пару. Вам помочь? :D")
-                user_id_fromWR.append(event.text) #event.user_id,
+                user_id_fromWR.append(event.text)
             elif request == "да":
                 BotWriteMsg(event.user_id, "Какой вай возвратной диапазон? \n 1. 18-24 лет"
                                            "\n2. 25-34 лет"

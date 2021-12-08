@@ -1,8 +1,8 @@
 import requests
 import pprint
 
-token_for_vk = '34f4f11807efbe8c1b82a0850fa70f137c556b7221acde76b2acbf4e7d90fc485f5bd4fdd4ccb496e8e95' #input('Token for vk information:')
-#token_for_vk = input('Token for infomation in vk: ')
+
+token_for_vk = input('Token for infomation in vk: ')
 def GetInfoFromVk(user_id):
     """ get infomration from the vk about person."""
     url_vk = 'https://api.vk.com/method/account.getProfileInfo'
@@ -17,10 +17,6 @@ def GetInfoFromVk(user_id):
         'response'
     ]
     return rrr['city']['title'], rrr['sex'],
-
-
-#a,b= GetInfoFromVk(670276685)
-#print(a)
 
 
 def GetPhotosVkData(user_id, count=5):
@@ -62,7 +58,6 @@ def ListOfCities(user_id):
         return rrr
 
 
-
 def sex_number(sex_num):
     if sex_num == 1:
         return 2
@@ -84,8 +79,6 @@ def age_preferences(numer_for_age):
         return 65, 74
     elif numer_for_age == 7:
         return 75, 100
-
-
 
 
 def get_users_for_date(user_id, number_for_age):
@@ -118,8 +111,6 @@ def get_users_for_date(user_id, number_for_age):
     name = [a_dict['first_name'] for a_dict in rrr]
     id_of_person = [a_dict['id'] for a_dict in rrr]
     return values_of_key, name, id_of_person
-
-#print(get_users_for_date(670276685, 1))
 
 
 import pathlib
